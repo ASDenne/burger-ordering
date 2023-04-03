@@ -8,12 +8,14 @@ def float_checker(text):
         except ValueError :
             easygui.msgbox("please enter a number")
     return float_
+
+
 def add_combo():
     combo_name = easygui.enterbox("what do you want to call your combo?")
     combo_size = easygui.integerbox("how many item's in combo")
     combo = {}
     for i in range(0,combo_size):
-        item_name = easygui.enterbox(f"what is item number {i}?")
+        item_name = easygui.enterbox(f"what is item number {i+1}?")
         item_price = float_checker(f"how much does {item_name} cost?")
         combo[item_name] = item_price
     menus[combo_name] = combo
@@ -37,5 +39,4 @@ menus = {
 }
 print(menus)
 add_combo()
-
-
+print(menus)
