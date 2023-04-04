@@ -39,4 +39,3 @@ menus = {
 }
 print(menus)
 add_combo()
-print(menus)
