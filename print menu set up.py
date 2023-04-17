@@ -29,3 +29,5 @@ menus = {
     }
 }
 print(format_menu(menus))
+#if time set up to work for any layers of dictonarys
+#function inside function
