@@ -93,7 +93,8 @@ menus = {
 }  # set's up menu
 options = ["print whole menu", "add_combo", "search menu", "delete menu item", "exit"]  # buttons
 action_defs = [print_whole_menu, add_combo, search_menu, delete, exit]  # functions connected to above buttons
-action = easygui.buttonbox("what are you trying to do?", choices=options)  # ask what action they want to do
-for i in range(0, len(options)):
-    if action == options[i]:  # checks if action chosen
-        action_defs[i]()  # preforms action
+while True:
+    action = easygui.buttonbox("what are you trying to do?", choices=options)  # ask what action they want to do
+    for i in range(0, len(options)):
+        if action == options[i]:  # checks if action chosen
+            action_defs[i]()  # preforms action
